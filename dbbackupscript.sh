@@ -13,7 +13,7 @@ log=$path/$logname
 echo "Backup:: Script Start -- $(date +%Y/%m/%d_%H:%M:%S)" >> $log
 START_TIME=$(date +%s)
 
-echo "login into USBN DB Server"
+echo "login into DB Server"
 pwd
 # Passing DB credentials by using cnf file
 cat > /home/$USER/.mysqllogin.cnf <<- "EOF"
