@@ -26,7 +26,7 @@ EOF
 chmod 600 /home/$USER/.mysqllogin.cnf
 
 # Run the mysqldump command to import the DB backup from mysql server
-/usr/bin/mysqldump --defaults-extra-file=/home/$USER/.mysqllogin.cnf -u dbusername beerboardb > dbbackup-$(date +%F).sql.gz
+/usr/bin/mysqldump --defaults-extra-file=/home/$USER/.mysqllogin.cnf -u dbusername dbuser > dbbackup-$(date +%F).sql.gz
 
 # Upload the DB backup.sql file into backup destination server
 scp -i $path/ec2.pem -r dbbackup-$(date '+%F').sql.gz $AWSUSERNAME@$AWSIPADDRESS:/home/ubuntu/dbbackup/
