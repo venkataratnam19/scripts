@@ -9,7 +9,7 @@ path="/home/$USER/dbbackupscripts/"
 logname=log_back_$TIMESTAMP.txt
 log=$path/$logname
 
-#Start the backup of Beerboard Mysql DB and save the log time in log back file
+#Start the backup of Mysql DB and save the log time in log back file
 echo "Backup:: Script Start -- $(date +%Y/%m/%d_%H:%M:%S)" >> $log
 START_TIME=$(date +%s)
 
